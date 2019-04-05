@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guilhem Carron - Web Portfolio</title>
+    <meta name="description" content="Discover Guilhem Carron's website. Découvrez mon portfolio web.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="reg.js"></script>
+    <script src="vanta.birds.min.js"></script>
+    <script src="./scripts/skills.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
+
+    <script>
+        $(document).ready(function () {
+            $('a[href*="#"]').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500);
+
+            });
+            $('.down').on('click', function (e) {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top
+                }, 500);
+            });
+            $(window).scroll(function () {
+                var scrollDistance = $(window).scrollTop();
+                // Assign active class to nav links while scolling
+                $('.section').each(function (i) {
+                    if ($(this).position().top <= scrollDistance + 50) {
+                        $('nav a.active').removeClass('active');
+                        $('nav a').eq(i).addClass('active');
+                    }
+                });
+            }).scroll();
+        });
+    </script>
+</head>
+<img src="./img/logo2.png" class="mono">
+<nav>
+    <ul>
+
+        <li><a href="#main" class="menu-item1">Main</a></li>
+        <li><a href="#about" class="menu-item2">About</a></li>
+        <li><a href="#services" class="menu-item3">Services</a></li>
+        <li><a href="#skills" class="menu-item3">Skills</a></li>
+        <li><a href="#portfolio" class="menu-item4">Portfolio</a></li>
+        <li><a href="#contact" class="menu-item5">Contact</a></li>
+        <li><a href="https://www.facebook.com/guilhem.carron" target="blank"><img src="./img/fb-logo.png" class="social"></a>
+        </li>
+        <li><a href="https://www.instagram.com/guilhem_carron/" target="blank"><img src="./img/instagram.png"
+                    class="social"></a></li>
+        <li><a href="CV.pdf" target="blank"><img src="./img/profile.png"
+                        class="social"><br>Voir mon CV</a></li>
+    </ul>
+</nav>
+
+<body>
+    <div class="container">
+        <div id="main" class="section">
+            <div class="center">
+                <svg id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1076.81 1380">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #0b0024;
+                            }
+
+                            .cls-2 {
+                                fill: #fff;
+                            }
+                        </style>
+                    </defs>
+                    <title>LOGO</title>
+                    <g id="fond1">
+                        <rect class="cls-1" x="-45.26" y="217.19" width="1192.29" height="757.92"
+                            transform="translate(1147.04 45.26) rotate(90)" />
+                    </g>
+                    <g id="fond2">
+                        <polygon class="cls-1" points="0 1067.86 706.5 222.08 1076.81 534.22 370.31 1380 0 1067.86" />
+                    </g>
+                    <g id="developpeur">
+                        <path class="cls-2"
+                            d="M268.34,1011.27h17q10,0,14.13,2.74t5.27,9.09q1.1,6.35,1.1,21.26t-1.1,21.26q-1.1,6.35-5.27,9.09t-14.13,2.74h-17ZM285,1067.55q5.07,0,6.9-1.15t2.39-5.53a236.42,236.42,0,0,0,0-32.95q-.57-4.42-2.39-5.58t-6.9-1.15h-5.75v46.37Z" />
+                        <path class="cls-2"
+                            d="M321.49,1077.46v-66.19H352.9v9.91H332.41v17.89h17.72V1049H332.41v18.57H352.9v9.91Z" />
+                        <path class="cls-2"
+                            d="M376.94,1077.46l-13.79-66.19h11.21l10.34,54.07h.67l10.25-54.07h10.92l-13.79,66.19Z" />
+                        <path class="cls-2"
+                            d="M419.08,1077.46v-66.19h31.41v9.91H430v17.89h17.72V1049H430v18.57h20.49v9.91Z" />
+                        <path class="cls-2" d="M465.33,1077.46v-66.19h10.92v56h18.2v10.2Z" />
+                        <path class="cls-2"
+                            d="M512.16,1075.39q-4.12-2.84-5.17-9.33t-1.05-21.69q0-15.2,1.05-21.69t5.17-9.33q4.12-2.84,13.79-2.84t13.79,2.84q4.12,2.84,5.22,9.38t1.1,21.65q0,15.1-1.1,21.65t-5.22,9.38q-4.12,2.84-13.79,2.84T512.16,1075.39Zm20.21-8.27q1.72-1.2,2.25-5.77t.53-17q0-12.41-.53-17t-2.25-5.77q-1.72-1.2-6.42-1.2t-6.37,1.2q-1.68,1.2-2.2,5.72t-.53,17q0,12.51.53,17t2.2,5.72q1.67,1.2,6.37,1.2T532.37,1067.12Z" />
+                        <path class="cls-2"
+                            d="M561.77,1011.27h20.69q6.8,0,10.3,2.55a12.39,12.39,0,0,1,4.69,7.17,50.36,50.36,0,0,1,1.2,12.22,51.45,51.45,0,0,1-1.15,12,12.66,12.66,0,0,1-4.74,7.36q-3.59,2.69-10.49,2.69h-9.58v22.22H561.77Zm17.91,34.06a11.09,11.09,0,0,0,5.36-1,4.73,4.73,0,0,0,2.11-3.37,44.63,44.63,0,0,0,.48-7.79,43.89,43.89,0,0,0-.48-7.7,4.73,4.73,0,0,0-2.11-3.37,10.83,10.83,0,0,0-5.27-1h-7.09v24.15Z" />
+                        <path class="cls-2"
+                            d="M612.52,1011.27h20.69q6.8,0,10.3,2.55a12.39,12.39,0,0,1,4.69,7.17,50.36,50.36,0,0,1,1.2,12.22,51.45,51.45,0,0,1-1.15,12,12.66,12.66,0,0,1-4.74,7.36q-3.59,2.69-10.49,2.69h-9.58v22.22H612.52Zm17.91,34.06a11.09,11.09,0,0,0,5.36-1,4.73,4.73,0,0,0,2.11-3.37,44.63,44.63,0,0,0,.48-7.79,43.89,43.89,0,0,0-.48-7.7,4.73,4.73,0,0,0-2.11-3.37,10.83,10.83,0,0,0-5.27-1h-7.09v24.15Z" />
+                        <path class="cls-2"
+                            d="M663.28,1077.46v-66.19h31.41v9.91H674.2v17.89h17.72V1049H674.2v18.57h20.49v9.91Z" />
+                        <path class="cls-2"
+                            d="M747.36,1011.27v37q0,13-1.15,18.9t-5.08,8.47q-3.93,2.55-12.93,2.55t-12.93-2.55q-3.93-2.55-5-8.47t-1.1-18.9v-37h10.92v41.17a88.75,88.75,0,0,0,.43,10.73q.43,3,2.06,4.09t5.65,1.06q4.12,0,5.75-1.06t2.06-4.09a88.75,88.75,0,0,0,.43-10.73v-41.17Z" />
+                        <path class="cls-2"
+                            d="M791.41,1077.46l-7.09-24.15h-9.38v24.15H764v-66.19h21.26q6.9,0,10.39,2.41a11.68,11.68,0,0,1,4.69,6.83,46.48,46.48,0,0,1,1.2,11.74,42.63,42.63,0,0,1-1.39,11.83,11,11,0,0,1-5.6,6.93l8.33,26.46Zm-3.45-35a4.6,4.6,0,0,0,2.15-3.17,34.19,34.19,0,0,0,.53-7.07,33.48,33.48,0,0,0-.53-7,4.58,4.58,0,0,0-2.15-3.13,11.32,11.32,0,0,0-5.27-.91h-7.76v22.22h7.76A11.31,11.31,0,0,0,788,1042.49Z" />
+                    </g>
+                    <g id="carron">
+                        <path class="cls-2"
+                            d="M348.32,973.24a53.71,53.71,0,0,1-31.5,10.08,55.1,55.1,0,0,1,0-110.2,53.59,53.59,0,0,1,31.5,9.92l-6.9,14.48a37.43,37.43,0,0,0-24.6-8.5,39.28,39.28,0,1,0,25.07,69.58Z" />
+                        <path class="cls-2"
+                            d="M372.14,966l-7.68,17.32H347.85l47.48-110.67L443,983.31H425.89L418.52,966Zm23.19-52.74-16.61,38.41h33.22Z" />
+                        <path class="cls-2"
+                            d="M518.82,983l-16.92.16-.16-.32-18.49-36a38.39,38.39,0,0,1-4.39.31l-.31.16H462.09v36.05H447.36l.16-110.2h31.34A37.06,37.06,0,0,1,498.29,941ZM500,910.11a22.19,22.19,0,0,0-22.1-22H462.09V932.3h15.83A22.22,22.22,0,0,0,500,910.11Z" />
+                        <path class="cls-2"
+                            d="M601.87,983l-16.93.16-.16-.32-18.49-36a38.42,38.42,0,0,1-4.39.31l-.31.16H545.14v36.05H530.41l.16-110.2h31.34A37.06,37.06,0,0,1,581.34,941Zm-18.81-72.89a22.19,22.19,0,0,0-22.1-22H545.14V932.3H561A22.22,22.22,0,0,0,583.07,910.11Z" />
+                        <path class="cls-2"
+                            d="M711.57,927.9c0,30.38-23,55.26-53.44,55.26-28.83,0-52-24.87-52-55.26,0-30.23,23.19-54.94,52-54.94C688.53,873,711.57,897.67,711.57,927.9Zm-15,0c0-21.88-16.45-39.67-38.39-39.67-20.53,0-37,17.79-37,39.67,0,22.2,16.45,40.14,37,40.14C680.07,968,696.52,950.09,696.52,927.9Z" />
+                        <path class="cls-2"
+                            d="M802.78,873.11v110.2H785.54L737.43,900v83.28H722.7V873.11h17.39l48.27,85.32V873.11Z" />
+                    </g>
+                    <g id="guilhem">
+                        <path class="cls-2"
+                            d="M346.74,823.11c-7.32,13.32-21,22.19-36.48,22.19-23.23,0-42.16-19.78-42.16-44.13s18.94-44.39,42.16-44.39a41,41,0,0,1,22.85,7.1l-2.65,4.69a37.12,37.12,0,0,0-20.2-6.47c-20.32,0-37.11,17.75-37.11,39.06,0,21.05,16.79,38.81,37.11,38.81,18.68,0,34.21-15.22,36.48-34.11H320v-4.69h31.69v44.26h-4.92Z" />
+                        <path class="cls-2"
+                            d="M401.78,845.31c-16.41,0-31.69-13.95-30.93-31.07V756.41h5.43v58a25.5,25.5,0,1,0,51,.13V756.41h5.3V814C432.2,831.74,418.44,845.31,401.78,845.31Z" />
+                        <path class="cls-2" d="M463.89,756v89.15h-4.8V756Z" />
+                        <path class="cls-2" d="M503.15,756.66v83.83H543.8v5.07h-46.2v-88.9Z" />
+                        <path class="cls-2"
+                            d="M620.42,845.31V805.23H570.56v40.07h-5.18v-89h5.18V800h49.86V756.28h5.3v89Z" />
+                        <path class="cls-2" d="M657,761.86v38H691.5v4.95H657v35.64h44.06v5.07H652V757h50.24v4.82Z" />
+                        <path class="cls-2"
+                            d="M763.45,845.43l-32.95-83.06v82.94h-5l.88-89.53,6.94.13,30.17,76.6,29.92-76.6,6.94-.13,1.14,89.53h-5V762.37Z" />
+                    </g>
+                    <g id="mono">
+                        <path class="cls-2"
+                            d="M669.32,101.61c-93.18,0-176.7,42.24-232.67,108.63l91.23,91.64c32.23-43.28,83.62-71.37,141.44-71.37a175.89,175.89,0,0,1,134.1,62.13V132.88A301.85,301.85,0,0,0,669.32,101.61Z" />
+                        <polygon class="cls-2"
+                            points="747.69 370.16 745.67 370.16 687.91 370.16 624.09 370.16 624.09 466.62 689.29 466.62 771.32 549.02 803.42 581.27 803.42 580.75 803.42 578.99 803.42 578.48 803.42 520.37 803.42 466.62 803.42 370.16 747.69 370.16" />
+                        <path class="cls-2"
+                            d="M803.42,583.54v58.32H687.91v-60c-5.54.53-11.15.81-16.82.81a175.07,175.07,0,0,1-102.52-33h0l-1.16-.85a177.59,177.59,0,0,1-43.74-240.92l-91.79-92.2A306.69,306.69,0,0,0,475.32,640l1.09.93a303.2,303.2,0,0,0,386.46,2.38Z" />
+                    </g>
+                </svg>
+            </div>
+            <h1>Guilhem Carron Portfolio web</h1>
+            <div class="down">
+                <svg id="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 27.496 27.496"
+                    style="enable-background:new 0 0 27.496 27.496;" xml:space="preserve" width="64px" height="64px">
+                    <g>
+                        <g>
+                            <g id="c122_arrow">
+                                <path id="color"
+                                    d="M27.496,13.747c0-7.591-6.154-13.746-13.748-13.746C6.156,0.001,0,6.156,0,13.747    c0,7.595,6.156,13.748,13.748,13.748C21.342,27.495,27.496,21.342,27.496,13.747z M13.457,22.492L5.485,10.009    c-0.053-0.068-0.082-0.15-0.082-0.232l0.036-0.166C5.5,9.483,5.633,9.399,5.776,9.399h15.942c0.144,0,0.276,0.084,0.338,0.212    c0.064,0.132,0.048,0.285-0.04,0.397l-7.972,12.483c-0.072,0.09-0.18,0.146-0.295,0.146    C13.637,22.638,13.529,22.582,13.457,22.492z"
+                                    data-original="#030104" class="active-path" data-old_color="#100e21"
+                                    fill="#100e21" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div id="about" class="section">
+            <div class="rect1">
+                <div class="bottom-title">
+                    <h2>A propos</h2>
+                    <p><span>Hello !</span><!-- My name is Guilhem, and I study web developpment and design in Lyon. I have
+                        several experiences in front-end developpment and webdesign. I'm passionate about web and new
+                        technologies since my childhood and when I have the opportunity I like to travel around the
+                        world.
+                        I try to be the most polyvalent as I can because I love to learn new things. <br>I aspire to
+                        become a talented front-end developper.!--> Je m'appelle Guilhem et j'étudie le développement web ainsi que le webdesign à Lyon. J'ai déjà quelques expériences professionnelles dans ces domaines. Je suis passionné par le web et les nouvelles technologies depuis de nombreuses années, et j'aime également voyager quand j'en ai l'occasion.<br>J'essaie de devenir aussi polyvalent que possible car j'aime apprendre de nouvelles choses et travailler sur des projets variés.</p>
+                </div>
+            </div>
+            <div class="rect2">
+                <div class="center">
+                    <img src="./img/guilhem.jpg" class="portrait">
+                </div>
+            </div>
+        </div>
+        <div id="services" class="section">
+            <div class="container">
+                <div data-aos="flip-up"  data-aos-delay="300" data-aos-duration="800" class="box">
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>Developpement</h3>
+                        <p>Sites vitrines, portfolios, boutiques en ligne. Je m'occupe de la mise en place de votre site web et vous accompagne tout au long du processus jusqu'à la mise en ligne. </p>
+                    </div>
+                </div>
+                <div data-aos="flip-down"  data-aos-delay="400" data-aos-duration="800" class="box">
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>Integration</h3>
+                        <p>Besoin d'intégrer des contenus ? Les mettre en forme ? Créer des animations attractives ? Je peux m'en occuper.</p>
+                    </div>
+                </div>
+                <div data-aos="flip-up"  data-aos-delay="500" data-aos-duration="800" class="box">
+                    <div class="content">
+                        <h2>03</h2>
+                        <h3>Webdesign</h3>
+                        <p>Sites web, landing pages, newsletters... Je m'occupe de la création de vos maquettes en accord avec les tendances actuelles.</p>
+                    </div>
+                </div>
+                <div data-aos="flip-down"  data-aos-delay="600" data-aos-duration="800" class="box">
+                    <div class="content">
+                        <h2>04</h2>
+                        <h3>Referencement</h3>
+                        <p>Quelques problèmes de visibilité sur le web ? Je suis en mesure de vous conseiller et d'améliorer le référencement naturel de vos pages web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="section">
+
+            <div class="flex">
+                <div class="left">
+                    <h2>My skills</h2>
+                </div>
+                <section class="skills">
+                    <progress style="display:none;"></progress>
+                    <progress data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" value="90" max="100"></progress><span>HTML5/CSS3</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"value="75" max="100"></progress><span>JavaScript/jQuery</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="400"value="75" max="100"></progress><span>SASS/SCSS</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="500"value="70" max="100"></progress><span>PHP</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="600"value="70" max="100"></progress><span>MySQL</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="700"value="50" max="100"></progress><span>Swift</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="800"value="90" max="100"></progress><span>SEO</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="900"value="75" max="100"></progress><span>Suite Adobe</span>
+                    <progress  data-aos="fade-up" data-aos-duration="700" data-aos-delay="1000"value="50" max="100"></progress><span>Blender</span>
+
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <div class="toolbar mb2 mt2">
+            <button class="btn fil-cat" href="" data-rel="all">All</button>
+            <button class="btn fil-cat" data-rel="dev">Developpement Web</button>
+            <button class="btn fil-cat" data-rel="webdesign">Webdesign</button>
+            <button class="btn fil-cat" data-rel="crea">Création</button>
+        </div>
+
+        <div style="clear:both;"></div>
+        <script>
+            $(document).ready(function () {
+                $('div.tile').click(function () {
+                    $(this).next('.overlay').css('display', 'flex');
+                    $(this).next('.overlay').fadeTo(400, 1);
+                })
+                $('.overlay').click(function () {
+                    $('.overlay').fadeTo(300, 0).queue(function (next) {
+                        $(this).css('display', 'none');
+                        next();
+                    });
+                })
+            });
+        </script>
+        <div id="pf">
+            <div class="tile scale-anm dev all">
+                <img src="./img/fitlift.png" alt="fitlift" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <img src="img/fitlift.png">
+                    </div>
+                    <div class="description">
+                        <h3>FITLIFT, la raquette connectée</h3>
+                        <h4>Projet fictif - Developpement</h4>
+                        <p>Développement full-stack à partir d'une maquette.<br>
+                            Outils : SCSS, JS/Jquery, PHP, MySQL<br>
+                            Fonctionnalités : Inscription, contact, connexion, gestion des commandes, gestoin de
+                            commentaires, gestion des utilisateurs.<br>
+                        </p>
+                        <a class="button" href="http://dki0671.phpnet.org/fitlift/produit.php" target="blank">Voir le
+                            site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tile scale-anm dev all">
+                <img src="./img/vae.png" alt="vae" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <img src="img/vae.png">
+                    </div>
+                    <div class="description">
+                        <h3>Plateforme VAE</h3>
+                        <h4>Refonte du site web des certificateurs VAE pour le DAVA de Grenoble</h4>
+                        <p>Réalisation du webdesign en accord avec une charte graphique et développement full-stack.
+                            Mise en place du référencement naturel.<br>
+                            Outils : SCSS, Git, Metalsmith, JS/Jquery, PHP, Google Search Console, Analytics<br>
+                        </p>
+                        <a class="button" href="http://www.vae-certificateurs.fr/" target="blank">Voir le site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tile scale-anm dev all">
+                <img src="./img/dava.png" alt="dava" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <img src="img/dava.png">
+                    </div>
+                    <div class="description">
+                        <h3>DAVA de Grenoble</h3>
+                        <h4>Refonte du site web du DAVA de Grenoble</h4>
+                        <p>Réalisation du webdesign en accord avec une charte graphique et développement full-stack.
+                            Mise en place du référencement naturel.<br>
+                            Outils : SCSS, Git, Metalsmith, JS/Jquery, PHP, Google Search Console, Analytics<br>
+                        </p>
+                        <a class="button" href="http://www.ac-grenoble.fr/dava/" target="blank">Voir le site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tile scale-anm crea all">
+                    <img src="./img/prosper.jpg" alt="prosper" />
+                </div>
+                <div class="overlay">
+                    <div class="container">
+                        <div class="img">
+                            <img src="img/prosper.jpg">
+                        </div>
+                        <div class="description">
+                            <h3>Affiche grand format</h3>
+                            <h4>Projet fictif</h4>
+                        </div>
+                    </div>
+                </div>
+            <div class="tile scale-anm webdesign all">
+                <img src="./img/snowlink.jpg" alt="snowlink" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <img src="img/snowlink-couv.jpg">
+                    </div>
+                    <div class="description">
+                        <h3>Snowlink</h3>
+                        <h4>Projet fictif - Webdesign</h4>
+                        <p>Réalisation de maquettes desktop et mobile sous adobe XD
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile scale-anm crea all">
+                <img src="./img/lowpoly.jpg" alt="lowpoly" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <video controls src="./img/lowpoly.mp4"></video>
+                    </div>
+                    <div class="description">
+                        <h3>Scène Low Poly</h3>
+                        <h4>Projet fictif - Création</h4>
+                        <p>Réalisation de A à Z d'une scène 3D lowpoly sous Blender 2.8.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile scale-anm crea all">
+                <img src="./img/depechemode.jpg" alt="depechemode" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <img src="img/depechemode-couv.jpg">
+                    </div>
+                    <div class="description">
+                        <h3>Depechemode</h3>
+                        <h4>Projet fictif - Mise en page</h4>
+                        <p>Réalisation d'une mise en page sur le thème de Depechemode. Gestion de gros volumes de texte
+                            sur Indesign.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile scale-anm webdesign all">
+                <img src="./img/gueuledebois.jpg" alt="gueuledebois" />
+            </div>
+            <div class="overlay">
+                <div class="container">
+                    <div class="img">
+                        <img src="img/gueuledebois-couv.jpg">
+                    </div>
+                    <div class="description">
+                        <h3>Gueule de bois</h3>
+                        <h4>Projet fictif - Webdesign</h4>
+                        <p>Réalisation de maquettes desktop sur photoshop.
+                        </p>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+       
+        <div style="clear:both;"></div>
+    </div>
+    <div id="contact" class="section">
+        <div class="container">
+            <div data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="700" class="cv">
+                <!--<h3>You want to hire me ? <br>Or just need some advices ?<br>
+                You can contact me right here.</h3>-->
+                <h3>Vous souhaitez travailler avec moi ? <br>Avez besoin de conseils ?<br>
+                    Vous pouvez me contacter juste ici.</h3>
+            </div>
+            <div data-aos="zoom-out-left" data-aos-delay="400" data-aos-duration="700" class="contactform">
+               
+           
+                <form id="contactform">
+                        <h2>Contact</h2>
+                        
+                    <p><input type="text" id="nom" name="nom" placeholder="Votre nom" required></p>
+
+                    <p><input type="text" id="sujet" name="sujet" placeholder="Objet" required></p>
+                  
+                    <p><input type="email"  id="email" name="email" placeholder="Votre email" required></p>
+          
+                    <p><textarea type="text" id="message" name="message"  placeholder="Votre message..." required></textarea></p>
+          
+                    <input type="submit"  id="valider" name="valider" value="Envoyer" class="formbutton">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    VANTA.BIRDS({
+        el: "#main",
+        backgroundColor: 0xffffff,
+        color1: 0xe9531e,
+        color2: 0x100e21,
+        colorMode: "lerpGradient",
+        wingSpan: 23.00,
+        speedLimit: 6.00,
+        separation: 40.00,
+        alignment: 1.00,
+        cohesion: 31.00
+    })
+</script>
+<script>
+    var tl = new TimelineMax();
+
+    //Les elements de la timeline s'executent les uns apres les autres
+    tl.from("#fond1", 0.8, {
+            y: -600,
+            delay: 1,
+            ease: Elastic.easeOut,
+            opacity: 0
+        })
+        .from("#mono", 0.7, {
+            opacity: 0,
+            ease: Bounce.easeOut,
+            scale: 1.8
+        })
+        .from("#fond2", 0.7, {
+            x: -100,
+            y: 100,
+            ease: Elastic.easeOut,
+            opacity: 0
+        })
+        .addLabel("text")
+        .from("#guilhem", 0.7, {
+            x: -100,
+            opacity: 0,
+            ease: Back.easeOut
+        }, "text")
+        .from("#carron", 0.8, {
+            x: -300,
+            opacity: 0,
+            ease: Back.easeOut
+        }, "text")
+        .from("#developpeur", 0.9, {
+            x: -500,
+            opacity: 0,
+            ease: Back.easeOut
+        }, "text");
+</script>
+   <script>
+        AOS.init();
+      </script>
+<script>
+    //portfolio anim
+    $(function () {
+        var selectedClass = "";
+        $(".fil-cat").click(function () {
+            selectedClass = $(this).attr("data-rel");
+            $("#pf").fadeTo(100, 0.1);
+            $("#pf div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+            setTimeout(function () {
+                $("." + selectedClass).fadeIn().addClass('scale-anm');
+                $("#pf").fadeTo(300, 1);
+            }, 300);
+        });
+    });
+</script>
+</html>
