@@ -620,16 +620,26 @@ h1 {
   z-index: -1;
 }
 
+#portfolio .overlay .container .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #portfolio .overlay .container img {
+  padding-top: 50px;
+  margin: auto;
   width: 100%;
   display: block;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 #portfolio .overlay .container video {
+  padding-top: 50px;
+  margin: auto;
   width: 100%;
   display: block;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 #portfolio .overlay .container .button {
@@ -639,7 +649,7 @@ h1 {
   border: 3px solid #e9531e;
   width: 100px;
   height: 17px;
-  margin-left: 25%;
+  margin-left: 15%;
   margin-top: 1.5em;
   text-decoration: none;
   text-align: center;
@@ -658,14 +668,14 @@ h1 {
   font-size: 2em;
   color: #e9531e;
   margin-top: 10%;
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 #portfolio .overlay h4 {
   font-size: 1.6em;
   color: white;
   margin-top: 0.3em;
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 #portfolio .overlay p {
@@ -673,7 +683,7 @@ h1 {
   font-style: italic;
   color: white;
   margin-top: 1em;
-  margin-left: 25%;
+  margin-left: 15%;
   border: none;
   display: block;
 }
